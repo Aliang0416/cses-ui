@@ -1,0 +1,44 @@
+# 关于CSES-UI
+
+## 框架基础： 
++ 包管理器：pnpm `8.15.5`
++ 脚手架： nx `18.2.1` 
++ 工作区： @nx/workspace `18.2.1` 搭建monorepo
++ angular 16
++ 文档生成器：storybook `7.2.1`
+
+
+# 运行
+如果出现运行失败异常：
+```
+ NX   Failed to create dependencies. See above for errors
+```
+或者storybook无法运行等问题，先尝试解决方案：
+**删除根目录下 `.nx` 和 `.angular` 文件夹**，然后重新运行
+
+
+## 打包组件库
+```
+pnpm build
+```
+
+## 文档预览：
+```
+pnpm doc:serve
+```
+
+## 文档打包
+```
+pnpm doc:build
+```
+
+```
+npx create-nx-workspace@latest cses-ui --packageManager=pnpm
+cd cses-ui
+pnpm add @nx/angular@16.10.0
+nx g @nx/angular:library ui --buildable=true --publishable=true --prefix=cses --importPath=cses-ui --skipTests=true
+nx g @nx/angular:storybook-configuration cses-ui
+```
+```
+nx run cses-ui:storybook
+```
