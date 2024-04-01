@@ -1,0 +1,9 @@
+<button
+    [class]="['cses-button', size]"
+    [attr.data-type]="type"
+    [disabled]="disabled" (click)="onClick($event)">
+    <i
+        [class]="['cses-button__icon', iconPrefix, iconName]"
+        *ngIf="iconName"></i>
+    <span><ng-content></ng-content></span>
+</button>

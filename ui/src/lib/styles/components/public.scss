@@ -1,0 +1,5 @@
+@import "cses-button";
+
+@mixin components() {
+  @include button();
+}
