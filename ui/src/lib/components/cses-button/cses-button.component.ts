@@ -1,10 +1,11 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgIf} from '@angular/common';
-
-// default和large高度40，small高度32
-export type ButtonSize = 'small' | 'default' | 'large';
+/**
+ * 按钮大小,default和large高度40，small高度32
+ */
+type ButtonSize = 'small' | 'default' | 'large';
 // primary主色按钮，default默认按钮，column列（上下排）按钮，text文字按钮
-export type ButtonType = 'primary' | 'default' | 'column' | 'text';
+type ButtonType = 'primary' | 'default' | 'column' | 'text';
 
 /**
  * 基础按钮组件
@@ -27,8 +28,9 @@ export default class CsesButton {
    * 图标前缀，如有需要可以修改
    */
   @Input('iconPrefix') iconPrefix = 'CSES';
+
   /**
-   * 按钮大小
+   * @link ButtonSize
    */
   @Input('size') size: ButtonSize = 'default';
   /**

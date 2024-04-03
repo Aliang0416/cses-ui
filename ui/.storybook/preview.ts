@@ -7,18 +7,20 @@ const preview: Preview = {
   parameters: {
     layout: 'centered',
   },
-  // argTypes: {
-  //   color: {
-  //     control: {
-  //       type: 'color',
-  //     }
-  //   },
-  //   backgroundColor: {
-  //     control: {
-  //       type: 'color',
-  //     }
-  //   }
-  // }
+  argTypes: {
+    color: {
+      control: {
+        type: 'color'
+      },
+      description: 'The color of the button',
+      defaultValue: { summary: 'red' },
+    },
+    backgroundColor: {
+      control: {
+        type: 'color',
+      }
+    }
+  }
 };
 
 export default preview;

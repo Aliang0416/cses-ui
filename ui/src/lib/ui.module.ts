@@ -4,6 +4,7 @@ import CsesButton from './components/cses-button/cses-button.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [CsesButton],
+  declarations: [],
+  exports: [],
 })
 export class UiModule {}

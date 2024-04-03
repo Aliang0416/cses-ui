@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "fix:nx": "rm -rf .nx && rm -rf .angular",
+    "clean": "rm -rf dist && rm -rf node_modules",
     "play": "nx run play:serve",
     "build": "nx run ui:build",
     "doc:serve": "nx run ui:storybook",
-    "doc:build": "nx run ui:build-storybook"
+    "doc:build": "nx run ui:build-storybook",
+    "ui:unpublish": "npm unpublish cses-ui --registry http://npm.runtongqiuben.com --force",
+    "ui:publish": "pnpm build && cd dist/cses-ui && npm publish --registry https://npm.runtongqiuben.com"
   },
   "private": true,
   "dependencies": {

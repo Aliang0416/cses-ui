@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import CsesButton from './cses-button.component';
 
+
 const meta: Meta<CsesButton> = {
   component: CsesButton,
   title: 'CsesButton',

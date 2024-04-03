@@ -4,7 +4,7 @@ import { Meta, Controls } from '@storybook/blocks';
 # 关于CSES-UI
 
 ## 框架基础：
-+ 包管理器：pnpm `8.15.5`
++ 包管理器：pnpm `8.15.5`  20.11.1
 + 脚手架： nx `18.2.1`
 + 工作区： @nx/workspace `18.2.1` 搭建monorepo
 + angular 16
@@ -18,6 +18,9 @@ import { Meta, Controls } from '@storybook/blocks';
 ```
 或者storybook无法运行等问题，先尝试解决方案：
 **删除根目录下 `.nx` 和 `.angular` 文件夹**，然后重新运行
+```
+pnpm fix:nx
+```
 
 ## 本地组件测试
 ```

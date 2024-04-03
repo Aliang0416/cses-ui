@@ -95,6 +95,7 @@
           "json",
           "-d",
           "ui/src",
+          "--u",
           "--disablePrivate",
           "--disableInternal",
           "--disableProtected",
