@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "emitDecoratorMetadata": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
   },
   "exclude": ["../**/*.spec.ts"],
   "include": [
@@ -13,6 +13,7 @@
     "../src/**/*.stories.tsx",
     "../src/**/*.stories.mdx",
     "*.js",
-    "*.ts"
+    "*.ts",
+    "../src/**/*.ts",
   ]
 }

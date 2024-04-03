@@ -7,12 +7,13 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-actions",
+    "@storybook/addon-controls",
   ],
-  typescript: {
-    // Overrides the default Typescript configuration to allow multi-package components to be documented via Autodocs.
-    skipBabel: true,
-    check: false,
-  },
+  // typescript: {
+  //   // Overrides the default Typescript configuration to allow multi-package components to be documented via Autodocs.
+  //   skipBabel: true,
+  //   check: false,
+  // },
   docs: {
     autodocs: true,
     defaultName: '说明',

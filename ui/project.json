@@ -65,6 +65,8 @@
           "json",
           "-d",
           "ui/src",
+          "-p",
+          "ui/tsconfig.json",
           "--disablePrivate",
           "--disableInternal",
           "--disableProtected",

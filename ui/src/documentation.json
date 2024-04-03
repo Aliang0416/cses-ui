@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "CsesButton",
-            "id": "component-CsesButton-abaf39c59e7e41d2314fd6b56e84d9183d519913ee44fd2fe96a6a53519c62e40dbe95454ee5f12d6e998226fe1962bda8c755325043947a8bad5f25efd418ca",
+            "id": "component-CsesButton-b8f76cc49e6ca71a81e3ce82f2f419f16964b8527936dde50e12f8a9e0d47d1c69498707c47751389c5608a857115ec4cf180fe14c143d426d9c6a73e214db76",
             "file": "ui/src/lib/components/cses-button/cses-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -26,61 +26,33 @@
             "hostDirectives": [],
             "inputsClass": [
                 {
+                    "name": "color",
+                    "defaultValue": "'#333'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
                     "name": "disabled",
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\n是否禁用\n",
                     "description": "<p>是否禁用</p>\n",
-                    "line": 43,
+                    "line": 40,
                     "type": "boolean",
                     "decorators": []
                 },
                 {
                     "name": "icon",
-                    "deprecated": true,
-                    "deprecationMessage": "表示被废除了",
-                    "jsdoctags": [
-                        {
-                            "pos": 586,
-                            "end": 623,
-                            "flags": 16842752,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 334,
-                            "tagName": {
-                                "pos": 587,
-                                "end": 591,
-                                "flags": 16842752,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 80,
-                                "escapedText": "desc"
-                            },
-                            "comment": "<p>这句话不会出现在文档中。不过ts可以查询到这个注释</p>\n"
-                        },
-                        {
-                            "pos": 623,
-                            "end": 645,
-                            "flags": 16842752,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 338,
-                            "tagName": {
-                                "pos": 624,
-                                "end": 634,
-                                "flags": 16842752,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 80,
-                                "escapedText": "deprecated"
-                            },
-                            "comment": "<p>表示被废除了</p>\n"
-                        }
-                    ],
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
                     "rawdescription": "\n\n图标名称,默认前缀为CSES\n",
                     "description": "<p>图标名称,默认前缀为CSES</p>\n",
-                    "line": 26,
+                    "line": 19,
                     "type": "string",
                     "decorators": []
                 },
@@ -91,7 +63,16 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\n图标前缀，如有需要可以修改\n",
                     "description": "<p>图标前缀，如有需要可以修改</p>\n",
-                    "line": 30,
+                    "line": 23,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
                     "type": "string",
                     "decorators": []
                 },
@@ -100,27 +81,9 @@
                     "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 770,
-                            "end": 790,
-                            "flags": 16842752,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 334,
-                            "tagName": {
-                                "pos": 771,
-                                "end": 775,
-                                "flags": 16842752,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 80,
-                                "escapedText": "link"
-                            },
-                            "comment": "<p>ButtonSize</p>\n"
-                        }
-                    ],
-                    "line": 35,
+                    "rawdescription": "\n\n{@link https://github.com GitHub}.\n",
+                    "description": "<p>{@link <a href=\"https://github.com\">https://github.com</a> GitHub}.</p>\n",
+                    "line": 32,
                     "type": "ButtonSize",
                     "decorators": []
                 },
@@ -131,7 +94,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\n按钮类型, type值为text和column时，size无效，且icon为必须\n",
                     "description": "<p>按钮类型, type值为text和column时，size无效，且icon为必须</p>\n",
-                    "line": 39,
+                    "line": 36,
                     "type": "ButtonType",
                     "decorators": []
                 }
@@ -144,7 +107,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\n点击事件\n",
                     "description": "<p>点击事件</p>\n",
-                    "line": 47,
+                    "line": 44,
                     "type": "EventEmitter"
                 }
             ],
@@ -163,27 +126,17 @@
             "description": "<p>基础按钮组件</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
             "rawdescription": "\n\n基础按钮组件\n```html\n```",
             "type": "component",
-            "sourceCode": "import {Component, EventEmitter, Input, Output} from '@angular/core';\nimport {NgIf} from '@angular/common';\n/**\n * 按钮大小,default和large高度40，small高度32\n */\ntype ButtonSize = 'small' | 'default' | 'large';\n// primary主色按钮，default默认按钮，column列（上下排）按钮，text文字按钮\ntype ButtonType = 'primary' | 'default' | 'column' | 'text';\n\n/**\n * 基础按钮组件\n * @example <cses-button type=\"default\">默认类型按钮</cses-button>\n */\n@Component({\n  selector: 'cses-button',\n  templateUrl: './cses-button.component.html',\n  imports: [NgIf],\n  standalone: true\n})\nexport default class CsesButton {\n  /**\n   * 图标名称,默认前缀为CSES\n   * @desc 这句话不会出现在文档中。不过ts可以查询到这个注释\n   * @deprecated 表示被废除了\n   */\n  @Input('icon') iconName: string;\n  /**\n   * 图标前缀，如有需要可以修改\n   */\n  @Input('iconPrefix') iconPrefix = 'CSES';\n\n  /**\n   * @link ButtonSize\n   */\n  @Input('size') size: ButtonSize = 'default';\n  /**\n   * 按钮类型, type值为text和column时，size无效，且icon为必须\n   */\n  @Input('type') type: ButtonType = 'default';\n  /**\n   * 是否禁用\n   */\n  @Input('disabled') disabled: boolean = false;\n  /**\n   * 点击事件\n   */\n  @Output('click') click = new EventEmitter<MouseEvent>();\n\n  /**\n   * @ignore\n   */\n  protected onClick(event: MouseEvent) {\n    event.stopPropagation();\n    if (this.disabled) return;\n    this.click.emit(event);\n  }\n\n  private _defaultIcon = 'cses-add';\n}\n",
+            "sourceCode": "import {Component, EventEmitter, Input, Output} from '@angular/core';\nimport {NgIf} from '@angular/common';\nimport {ButtonSize, ButtonType} from \"./cses-button.type\";\n\n/**\n * 基础按钮组件\n * @example <cses-button type=\"default\">默认类型按钮</cses-button>\n */\n@Component({\n  selector: 'cses-button',\n  templateUrl: './cses-button.component.html',\n  imports: [NgIf],\n  standalone: true\n})\nexport default class CsesButton {\n  /**\n   * 图标名称,默认前缀为CSES\n   */\n  @Input('icon') iconName: string = '';\n  /**\n   * 图标前缀，如有需要可以修改\n   */\n  @Input('iconPrefix') iconPrefix = 'CSES';\n\n  @Input('label') label  = ''\n\n  @Input('color') color = '#333';\n\n  /**\n   * {@link https://github.com GitHub}.\n   */\n  @Input('size') size: ButtonSize = 'default';\n  /**\n   * 按钮类型, type值为text和column时，size无效，且icon为必须\n   */\n  @Input('type') type: ButtonType = 'default';\n  /**\n   * 是否禁用\n   */\n  @Input('disabled') disabled: boolean = false;\n  /**\n   * 点击事件\n   */\n  @Output('click') click = new EventEmitter<MouseEvent>();\n\n  /**\n   * @ignore\n   */\n  protected onClick(event: MouseEvent) {\n    event.stopPropagation();\n    if (this.disabled) return;\n    this.click.emit(event);\n  }\n\n  private _defaultIcon = 'cses-add';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<button\n    [class]=\"['cses-button', size]\"\n    [attr.data-type]=\"type\"\n    [disabled]=\"disabled\" (click)=\"onClick($event)\">\n    <i\n        [class]=\"['cses-button__icon', iconPrefix, iconName]\"\n        *ngIf=\"iconName\"></i>\n    <span><ng-content></ng-content></span>\n</button>\n"
+            "templateData": "<button\n  [class]=\"['cses-button', size]\"\n  [attr.data-type]=\"type\"\n  [disabled]=\"disabled\" (click)=\"onClick($event)\">\n  <i\n    [class]=\"['cses-button__icon', iconPrefix, iconName]\"\n    *ngIf=\"iconName\"></i>\n  <span>{{label}}</span>\n</button>\n"
         }
     ],
     "modules": [],
     "miscellaneous": {
         "variables": [
-            {
-                "name": "config",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "ui/.storybook/main.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "StorybookConfig",
-                "defaultValue": "{\n  stories: ['../src/**/*.mdx', '../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\n  addons: [\n    \"@storybook/addon-links\",\n    \"@storybook/addon-essentials\",\n    \"@storybook/addon-interactions\",\n    \"@storybook/addon-actions\",\n  ],\n  typescript: {\n    // Overrides the default Typescript configuration to allow multi-package components to be documented via Autodocs.\n    skipBabel: true,\n    check: false,\n  },\n  docs: {\n    autodocs: true,\n    defaultName: '说明',\n  },\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  core: {\n    // @ts-ignore\n    builder: 'webpack5',\n  },\n}"
-            },
             {
                 "name": "eachType",
                 "ctype": "miscellaneous",
@@ -192,7 +145,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  name: '各种类型',\n  parameters: {\n    actions: {\n    }\n  },\n  render: (args) => ({\n    template: `<cses-button type=\"default\">默认类型按钮</cses-button>\n<br>\n<br>\n<!--<cses-button type=\"column\" >上按钮下文字</cses-button>-->\n<cses-button type=\"primary\">主色按钮</cses-button>\n<br>\n<br>\n<cses-button type=\"text\">纯文本类型</cses-button>\n<a href=\"http://localhost:4400/?path=/docs/%E5%85%B3%E4%BA%8E-%E9%9C%80%E7%9F%A5\">跳转</a>\n`,\n  })\n}"
+                "defaultValue": "{\n  name: '各种类型',\n  parameters: {\n  },\n  args: {\n\n  },\n  render: (args) => ({\n    template: `<cses-button type=\"default\" label=\"默认类型\" />\n<br>\n<br>\n<cses-button type=\"primary\" label=\"主色按钮\" />\n<br>\n<br>\n<cses-button type=\"text\" label=\"文本按钮\" />\n`,\n  })\n}"
+            },
+            {
+                "name": "globalArgTypes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "ui/src/lib/globalArgTypes.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  color: {\n    control: {\n      type: 'color'\n    },\n    description: 'color',\n    // table: {\n    //   category: 'inputs',\n    //   type: {\n    //     summary: 'color',\n    //   },\n    //   disable: false\n    // }\n  }\n}"
             },
             {
                 "name": "meta",
@@ -202,17 +165,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CsesButton>",
-                "defaultValue": "{\n  component: CsesButton,\n  title: 'CsesButton',\n  // title: 'Components/CsesButton',\n}"
-            },
-            {
-                "name": "preview",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "ui/.storybook/preview.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    layout: 'centered',\n  },\n  argTypes: {\n    color: {\n      control: {\n        type: 'color'\n      },\n      description: 'The color of the button',\n      defaultValue: { summary: 'red' },\n    },\n    backgroundColor: {\n      control: {\n        type: 'color',\n      }\n    }\n  }\n}"
+                "defaultValue": "{\n  component: CsesButton,\n  title: 'CsesButton',\n  parameters: {\n    order: 'button',\n  },\n  argTypes: {\n    color: globalArgTypes.color,\n  }\n  // title: 'Components/CsesButton',\n}"
             },
             {
                 "name": "Text",
@@ -222,7 +175,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  name: '带文字',\n  args: {\n    size: 'default',\n    type: 'default',\n    disabled: false,\n  },\n  // render: (args) => ({\n  //   template: `<cses-button [disabled]=\"false\" (click)=\"onClick($event)\">按钮</cses-button>`,\n  //   props: {\n  //     onClick: (event: MouseEvent) => {\n  //       console.log('click', event);\n  //     }\n  //   }\n  // })\n}"
+                "defaultValue": "{\n  name: '带文字',\n  args: {\n    label: '按钮',\n    size: 'default',\n    type: 'default',\n    disabled: false,\n  },\n  render: (args) => ({\n    template: `<cses-button [disabled]=\"false\" (click)=\"onClick($event)\">按钮</cses-button>`,\n    props: {\n      enabled: true,\n      onClick: (event: MouseEvent) => {\n        console.log('click', event);\n      }\n    }\n  })\n}"
             }
         ],
         "functions": [],
@@ -232,7 +185,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "\"small\" | \"default\" | \"large\"",
-                "file": "ui/src/lib/components/cses-button/cses-button.component.ts",
+                "file": "ui/src/lib/components/cses-button/cses-button.type.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "<p>按钮大小,default和large高度40，small高度32</p>\n",
@@ -243,7 +196,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "\"primary\" | \"default\" | \"column\" | \"text\"",
-                "file": "ui/src/lib/components/cses-button/cses-button.component.ts",
+                "file": "ui/src/lib/components/cses-button/cses-button.type.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -263,18 +216,6 @@
         ],
         "enumerations": [],
         "groupedVariables": {
-            "ui/.storybook/main.ts": [
-                {
-                    "name": "config",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "ui/.storybook/main.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "StorybookConfig",
-                    "defaultValue": "{\n  stories: ['../src/**/*.mdx', '../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\n  addons: [\n    \"@storybook/addon-links\",\n    \"@storybook/addon-essentials\",\n    \"@storybook/addon-interactions\",\n    \"@storybook/addon-actions\",\n  ],\n  typescript: {\n    // Overrides the default Typescript configuration to allow multi-package components to be documented via Autodocs.\n    skipBabel: true,\n    check: false,\n  },\n  docs: {\n    autodocs: true,\n    defaultName: '说明',\n  },\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  core: {\n    // @ts-ignore\n    builder: 'webpack5',\n  },\n}"
-                }
-            ],
             "ui/src/lib/components/cses-button/cses-button.component.stories.ts": [
                 {
                     "name": "eachType",
@@ -284,7 +225,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  name: '各种类型',\n  parameters: {\n    actions: {\n    }\n  },\n  render: (args) => ({\n    template: `<cses-button type=\"default\">默认类型按钮</cses-button>\n<br>\n<br>\n<!--<cses-button type=\"column\" >上按钮下文字</cses-button>-->\n<cses-button type=\"primary\">主色按钮</cses-button>\n<br>\n<br>\n<cses-button type=\"text\">纯文本类型</cses-button>\n<a href=\"http://localhost:4400/?path=/docs/%E5%85%B3%E4%BA%8E-%E9%9C%80%E7%9F%A5\">跳转</a>\n`,\n  })\n}"
+                    "defaultValue": "{\n  name: '各种类型',\n  parameters: {\n  },\n  args: {\n\n  },\n  render: (args) => ({\n    template: `<cses-button type=\"default\" label=\"默认类型\" />\n<br>\n<br>\n<cses-button type=\"primary\" label=\"主色按钮\" />\n<br>\n<br>\n<cses-button type=\"text\" label=\"文本按钮\" />\n`,\n  })\n}"
                 },
                 {
                     "name": "meta",
@@ -294,7 +235,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CsesButton>",
-                    "defaultValue": "{\n  component: CsesButton,\n  title: 'CsesButton',\n  // title: 'Components/CsesButton',\n}"
+                    "defaultValue": "{\n  component: CsesButton,\n  title: 'CsesButton',\n  parameters: {\n    order: 'button',\n  },\n  argTypes: {\n    color: globalArgTypes.color,\n  }\n  // title: 'Components/CsesButton',\n}"
                 },
                 {
                     "name": "Text",
@@ -304,32 +245,32 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  name: '带文字',\n  args: {\n    size: 'default',\n    type: 'default',\n    disabled: false,\n  },\n  // render: (args) => ({\n  //   template: `<cses-button [disabled]=\"false\" (click)=\"onClick($event)\">按钮</cses-button>`,\n  //   props: {\n  //     onClick: (event: MouseEvent) => {\n  //       console.log('click', event);\n  //     }\n  //   }\n  // })\n}"
+                    "defaultValue": "{\n  name: '带文字',\n  args: {\n    label: '按钮',\n    size: 'default',\n    type: 'default',\n    disabled: false,\n  },\n  render: (args) => ({\n    template: `<cses-button [disabled]=\"false\" (click)=\"onClick($event)\">按钮</cses-button>`,\n    props: {\n      enabled: true,\n      onClick: (event: MouseEvent) => {\n        console.log('click', event);\n      }\n    }\n  })\n}"
                 }
             ],
-            "ui/.storybook/preview.ts": [
+            "ui/src/lib/globalArgTypes.ts": [
                 {
-                    "name": "preview",
+                    "name": "globalArgTypes",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "ui/.storybook/preview.ts",
+                    "file": "ui/src/lib/globalArgTypes.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    layout: 'centered',\n  },\n  argTypes: {\n    color: {\n      control: {\n        type: 'color'\n      },\n      description: 'The color of the button',\n      defaultValue: { summary: 'red' },\n    },\n    backgroundColor: {\n      control: {\n        type: 'color',\n      }\n    }\n  }\n}"
+                    "type": "object",
+                    "defaultValue": "{\n  color: {\n    control: {\n      type: 'color'\n    },\n    description: 'color',\n    // table: {\n    //   category: 'inputs',\n    //   type: {\n    //     summary: 'color',\n    //   },\n    //   disable: false\n    // }\n  }\n}"
                 }
             ]
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "ui/src/lib/components/cses-button/cses-button.component.ts": [
+            "ui/src/lib/components/cses-button/cses-button.type.ts": [
                 {
                     "name": "ButtonSize",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "\"small\" | \"default\" | \"large\"",
-                    "file": "ui/src/lib/components/cses-button/cses-button.component.ts",
+                    "file": "ui/src/lib/components/cses-button/cses-button.type.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "<p>按钮大小,default和large高度40，small高度32</p>\n",
@@ -340,7 +281,7 @@
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "\"primary\" | \"default\" | \"column\" | \"text\"",
-                    "file": "ui/src/lib/components/cses-button/cses-button.component.ts",
+                    "file": "ui/src/lib/components/cses-button/cses-button.type.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -364,29 +305,9 @@
     },
     "routes": [],
     "coverage": {
-        "count": 14,
+        "count": 15,
         "status": "low",
         "files": [
-            {
-                "filePath": "ui/.storybook/main.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "config",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "ui/.storybook/preview.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "preview",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
             {
                 "filePath": "ui/src/lib/components/cses-button/cses-button.component.stories.ts",
                 "type": "variable",
@@ -422,9 +343,19 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "CsesButton",
-                "coveragePercent": 85,
-                "coverageCount": "6/7",
+                "coveragePercent": 77,
+                "coverageCount": "7/9",
                 "status": "very-good"
+            },
+            {
+                "filePath": "ui/src/lib/globalArgTypes.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "globalArgTypes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             }
         ]
     }
