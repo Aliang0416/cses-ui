@@ -21,13 +21,12 @@ export default class CsesButton {
    * 图标前缀，如有需要可以修改
    */
   @Input('iconPrefix') iconPrefix = 'CSES';
-
-  @Input('label') label  = ''
-
-  @Input('color') color = '#333';
-
   /**
-   * {@link https://github.com GitHub}.
+   * 按钮文本
+   */
+  @Input('label') label = ''
+  /**
+   * 按钮尺寸
    */
   @Input('size') size: ButtonSize = 'default';
   /**
@@ -37,7 +36,7 @@ export default class CsesButton {
   /**
    * 是否禁用
    */
-  @Input('disabled') disabled: boolean = false;
+  @Input('disabled') disabled = false;
   /**
    * 点击事件
    */
@@ -51,6 +50,4 @@ export default class CsesButton {
     if (this.disabled) return;
     this.click.emit(event);
   }
-
-  private _defaultIcon = 'cses-add';
 }

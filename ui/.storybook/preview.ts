@@ -1,6 +1,7 @@
 import {Preview} from '@storybook/angular';
 import {setCompodocJson} from "@storybook/addon-docs/angular";
 import * as docJson from '../src/documentation.json';
+
 setCompodocJson(docJson);
 
 const preview: Preview = {
@@ -23,14 +24,14 @@ const preview: Preview = {
         matcher: {
           color: /(background|color)$/i,
         }
+      },
+      storySort: {
+        method: 'alphabetical',
+        order: ['文档', ['需知','story文档编写'], '组件'],
       }
-      // storySort: {
-      //   order: ['*', 'button'],
-      // }
     }
   },
-  argTypes: {
-  }
+  argTypes: {}
 };
 
 export default preview;
