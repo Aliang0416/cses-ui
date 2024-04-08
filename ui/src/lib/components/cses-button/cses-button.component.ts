@@ -4,7 +4,7 @@ import {ButtonSize, ButtonType} from "./cses-button.type";
 
 /**
  * 基础按钮组件
- * @example <cses-button type="default">默认类型按钮</cses-button>
+ * @example <cses-button label=“按钮” />
  */
 @Component({
   selector: 'cses-button',
@@ -14,7 +14,7 @@ import {ButtonSize, ButtonType} from "./cses-button.type";
 })
 export default class CsesButton {
   /**
-   * 图标名称,默认前缀为CSES
+   * 图标名
    */
   @Input('icon') iconName: string = '';
   /**
@@ -42,9 +42,6 @@ export default class CsesButton {
    */
   @Output('click') click = new EventEmitter<MouseEvent>();
 
-  /**
-   * @ignore
-   */
   protected onClick(event: MouseEvent) {
     event.stopPropagation();
     if (this.disabled) return;

@@ -11,8 +11,11 @@ CSES组件库。
 
 # 安装
 ```bash
+nvm install 20.11.1
+nvm use 20.11.1
 npm install -g pnpm@8.15.5
 pnpm install
+git update-index --assume-unchanged ui/src/documentation.json  ## 忽略compoDoc自动生成的JSON文件
 ```
 
 # 运行
@@ -27,8 +30,6 @@ pnpm play
 pnpm doc:serve
 ```
 
-
-
 ## Error
 如果出现运行失败异常：
 ```
@@ -40,16 +41,21 @@ pnpm doc:serve
 pnpm fix:nx
 ```
 
-## 发版
+## 打包 & 发版
 
 ## 打包组件库
 ```
-pnpm build
+pnpm ui:build
 ```
 
 ## 发布组件库
 ```
-pnpm publish
+pnpm ui:publish
+```
+
+## 取消发版
+```
+pnpm ui:unpublish
 ```
 
 ## 文档库打包

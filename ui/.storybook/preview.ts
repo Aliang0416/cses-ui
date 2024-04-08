@@ -19,6 +19,7 @@ const preview: Preview = {
   // },
   parameters: {
     layout: 'centered',
+    controls: { expanded: true },
     options: {
       controls: {
         matcher: {

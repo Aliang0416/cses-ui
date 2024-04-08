@@ -1,12 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import CsesButton from './cses-button.component';
+import {type} from "../globalArgTypes";
 
 const meta: Meta<CsesButton> = {
   component: CsesButton,
-  // title: 'CsesButton',
   title: '组件/CsesButton',
   argTypes: {
-    click: { action: 'click' },
+    click: { action: 'click', control: { type: 'none' } },
+    iconPrefix: type('iconPrefix' ,{ description: 'icon前缀，如有需要可修改' } ),
   }
 };
 export default meta;

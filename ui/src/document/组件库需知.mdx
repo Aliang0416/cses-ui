@@ -1,8 +1,8 @@
 import { Meta, Controls } from '@storybook/blocks';
 
 <Meta title="文档/需知" />
-
 # 关于CSES-UI
+CSES组件库。
 
 ## 框架基础：
 + nodejs：`20.11.1`
@@ -14,8 +14,11 @@ import { Meta, Controls } from '@storybook/blocks';
 
 # 安装
 ```bash
+nvm install 20.11.1
+nvm use 20.11.1
 npm install -g pnpm@8.15.5
 pnpm install
+git update-index --assume-unchanged ui/src/documentation.json  ## 忽略compoDoc自动生成的JSON文件
 ```
 
 # 运行
@@ -41,23 +44,27 @@ pnpm doc:serve
 pnpm fix:nx
 ```
 
-## 发版
+## 打包 & 发版
 
 ## 打包组件库
 ```
-pnpm build
+pnpm ui:build
 ```
 
 ## 发布组件库
 ```
-pnpm publish
+pnpm ui:publish
+```
+
+## 取消发版
+```
+pnpm ui:unpublish
 ```
 
 ## 文档库打包
 ```
 pnpm doc:build
 ```
-
 
 ## 创建流程
 ```

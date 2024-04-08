@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'cses-ui-root',
+  imports: [RouterModule],
+  selector: 'cses-ui-play',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
