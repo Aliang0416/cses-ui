@@ -1,2 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import "ui/src/lib/styles/public.scss";
+:root {
+  --font-size: 14px;
+  --border-radius: 4px;
+  --font-family: Arial, Helvetica, sans-serif;
+}
+
+html[data-theme="light"]:root {
+  --body-background: #efefef;
+  --text-color: #333;
+}
+
+/* 深色模式 */
+html[data-theme="dark"]:root {
+  --body-background: #181818;
+  --text-color: #ededed;
+}
+
+body {
+  background: var(--body-background) !important;
+  color: var(--text-color) !important;
+  font-size: var(--font-size);
+  transition: background 0.3s;
+}
